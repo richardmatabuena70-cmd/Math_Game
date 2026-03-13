@@ -1,0 +1,22 @@
+{
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "DB_HOST": "@db-host",
+    "DB_USER": "@db-user",
+    "DB_PASSWORD": "@db-password",
+    "DB_NAME": "@db-name",
+    "DB_PORT": "5432",
+    "JWT_SECRET": "@jwt-secret"
+  }
+}
